@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(253, 253, 253);
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Vertical scrollbar width */
+    height: 1px;
+    /* Horizontal scrollbar height */
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #3c3131;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Optional roundness */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #998b8b;
+    /* Color of the scrollbar handle */
+    border-radius: 10px;
+    /* Roundness of the scrollbar handle */
+    border: 2px solid #555;
+    /* Optional border around the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a39fa8;
+    /* Color when hovering over the handle */
+}
+
+/* Buttons at the ends of the scrollbar */
+::-webkit-scrollbar-button {
+    background-color: #666;
+    /* Color of the scrollbar buttons */
+    display: none;
+    /* Hide the buttons */
+}
+
+/* Bottom corner where both scrollbars meet */
+
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(92, 77, 77, 0.537), rgb(34, 34, 48));
+}
+
+header {
+    height: 2.5rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.save img {
+    height: 1.5rem;
+    transition: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.tittle {
+    color: rgb(13, 17, 8);
+}
+
+.save img:hover {
+    transform: scale(1.2);
+}
+
+.headermiddlecontent img {
+    height: 2.2rem;
+    width: 1.5rem;
+}
+
+.headermiddlecontent {
+    display: flex;
+    gap: 1rem;
+}
+
+.headermiddlecontent p {
+    margin-top: 0.5rem;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.save {
+    display: flex;
+    gap: 1rem;
+}
+
+.save p {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hanger {
+    height: 6rem;
+    width: 15rem;
+    border: 1px solid black;
+    position: absolute;
+    top: 9%;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.677);
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    display: none;
+}
+
+.hanger .div {
+    color: rgb(8, 1, 4);
+    border-bottom: 1px solid black;
+}
+
+.middle {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.left {
+    height: 90%;
+    width: 25%;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.details {
+    height: 2rem;
+    width: 13rem;
+    background: linear-gradient(rgba(72, 72, 82, 0.631), rgba(101, 120, 200, 0.684));
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px rgb(103, 68, 68);
+}
+
+.heading {
+    text-align: center;
+}
+
+.findimg img {
+    height: 200px;
+    width: 250px;
+    border-bottom-left-radius: 20px;
+}
+
+.right {
+    height: 80%;
+    width: 75%;
+    border: 1px solid rgb(35, 29, 29);
+    border-radius: 20px;
+    overflow: auto;
+
+    box-shadow: 2px 2px 5px black;
+    background: linear-gradient(rgba(55, 55, 61, 0.484), rgba(64, 71, 64, 0.193))
+}
+
+.right::-webkit-scrollbar {
+    width: 5px;
+    height: 12px;
+}
+
+.right::-webkit-scrollbar-track {
+    border-radius: 30px;
+}
+
+
+.input {
+    position: absolute;
+    top: 88%;
+    left: 30%;
+}
+
+textarea {
+    height: 2rem;
+    width: 66vw;
+    outline: none;
+    resize: none;
+    border: 2px solid rgba(83, 85, 78, 0.505);
+    background: #705e5e3e;
+    color: rgb(16, 18, 19);
+    border-radius: 10px;
+    text-align: start;
+    position: relative;
+    background: linear-gradient(rgba(216, 213, 224, 0.665), rgba(227, 228, 223, 0.67));
+    text-align: start;
+    padding-right: 30%;
+    padding-left: 10%;
+    font-size: 1.1rem;
+}
+
+textarea::placeholder {
+    padding-left: 40px;
+    padding-top: 4px;
+    color: rgb(20, 19, 19);
+}
+
+.voices {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 85%;
+    gap: 2rem;
+}
+
+.input img {
+    height: 1.3rem;
+}
+
+@media (max-width:1100px) {
+    .save {
+        display: none;
+    }
+
+    .hanger {
+        right: 17px;
+    }
+
+    .voices {
+        display: flex;
+        position: absolute;
+        top: 15%;
+        left: 60%;
+        gap: 1rem;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        height: 80%;
+        width: 100%;
+        border: 1px solid rgb(35, 29, 29);
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px black;
+        background: linear-gradient(rgba(55, 55, 61, 0.484), rgba(64, 71, 64, 0.193));
+        padding: 2rem;
+        font-size: 1.3rem;
+
+
+
+    }
+
+    .input {
+        position: absolute;
+        top: 91%;
+        left: 8%;
+    }
+
+
+
+    .userinputempty .logotittle {
+        color: rgb(52, 43, 43);
+        font-size: 1.3rem;
+        position: relative;
+        font-style: italic;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    textarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+
+        height: 2.5rem;
+    }
+}
+
+.img {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+}
+
+#ai-response {
+    margin: 3rem;
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.userinputempty {
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 2rem;
+    transition: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+
+}
+
+.userinputempty .logotittle {
+    color: rgb(217, 217, 217);
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.userinputempty img {
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 50px;
+}
+
+
+.downloadbtn img {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 73%;
+    left: 20%;
+
+}
+
+.searchimginput {
+    height: 2.3rem;
+    width: 15rem;
+    border: 3px solid rgb(109, 101, 101);
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 2px 2px linen;
+    position: absolute;
+    top: 83%;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+}
+
+.searchimginput input {
+    height: 100%;
+    width: 90%;
+    outline: none;
+    border: none;
+    background: #b8adad45;
+}
+
+.imgsearchbtn img {
+    height: 2rem;
+    width: 2rem;
+    background: #b8adad45;
+}
+
+@media (max-width:600px) {
+    #ai-response {
+        margin: 0.5rem;
+        margin-top: 5rem;
+        font-size: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    textarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85vw;
+        height: 2.5rem;
+    }
+
+    .userinputempty {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
+}
